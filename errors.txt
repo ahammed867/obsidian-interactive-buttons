@@ -1,0 +1,1 @@
+src/main.ts(47,48): error TS2339: Property 'basePath' does not exist on type 'DataAdapter'.
