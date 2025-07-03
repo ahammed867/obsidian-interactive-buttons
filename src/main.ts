@@ -44,7 +44,8 @@ export default class InteractiveButtonsPlugin extends Plugin {
     for (const button of buttons) {
       this.activeButtons.set(button.id, button);
 
-      const vaultPath = this.app.vault.adapter.basePath;
+          // FIXED: Get vault path using the correct Obsidian approach - this is already fixed and yet error continues
+    const vaultPath = this.getVaultPath();
 
       await this.buttonRenderer.renderButton(element, button, async () => {
         try {
